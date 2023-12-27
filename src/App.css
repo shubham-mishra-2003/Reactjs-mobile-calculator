@@ -1,38 +1,89 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 95vh;
+  background: linear-gradient(to top left, #004863, #002d55);
+}
+
+h1 {
+  font-size: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #f0f8f0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
+  border: 1px solid #717377;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+  width: 100%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 20px #004863;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  width: 370px;
+  border: none;
+  padding: 24px;
+  margin: 10px;
+  background: transparent;
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+  color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  width: 80px;
+  height: 80px;
+  margin: 9px;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: -8px -8px 15px rgba(0, 238, 255, 0.2);
+  cursor: pointer;
+}
+
+button:focus {
+  background:linear-gradient(to top right, #004863, #00aff0);
+}
+
+.equal-Btn {
+  background-color: #00c8ff;
+  color: #002d55;
+}
+.equal-Btn:focus{
+  background: linear-gradient(to top left, #00aff0, #a844ff);
+  color: #ffffff;
+}
+
+.operator-Btn {
+  color: #ffa200;
+  background: #ffffff;
+}
+.operator-Btn:focus{
+  background: #ffa200;
+  color: #f0f8f0;
 }
